@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, viewport-fit=cover"
+    >
+
+    <title>Corrida Saudável 3D - Jogo</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div id="hud">
+        <div class="box">
+            ⭐
+            <span id="sc">50</span>
+            <div id="bar"></div>
+        </div>
+
+        <div class="box">
+            🏆
+            <span id="hc">0</span>
+
+            <div style="font-size: 12px; font-weight: 600;">
+                Nível
+                <span id="lv">1</span>
+            </div>
+        </div>
+    </div>
+
+    <div id="msg"></div>
+
+    <!-- Telas do jogo: pausa e fim de jogo (js/telas.js). O menu principal fica em index.html -->
+    <div id="ov" style="display: none">
+        <div class="box scr" id="s-pause">
+            <h1>⏸ Pausado</h1>
+            <div class="menu-btns">
+                <button id="p-resume" class="big">▶ Continuar</button>
+                <button id="p-restart" class="sec">🔄 Reiniciar</button>
+                <button class="sec snd">🔊 Som: ligado</button>
+                <button id="p-menu" class="sec">🏠 Menu principal</button>
+            </div>
+            <small class="hint">Enter: continuar · P/Esc: pausa</small>
+        </div>
+
+        <div class="box scr" id="s-over">
+            <h1>💀 Fim de jogo</h1>
+            <div id="o-why"></div>
+            <div class="final">Pontuação final<b id="o-score">0</b></div>
+            <div id="o-new" class="newrec">🎉 Novo recorde!</div>
+            <div id="o-best"></div>
+            <div id="o-stats" class="desc"></div>
+            <div class="menu-btns">
+                <button id="o-again" class="big">🔄 Jogar de novo</button>
+                <button id="o-menu" class="sec">🏠 Menu principal</button>
+            </div>
+        </div>
+    </div>
+
+    <button id="pause" aria-label="Pausar">⏸</button>
+
+    <button id="mute" aria-label="Som">🔊</button>
+
+    <!-- Biblioteca Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <!-- Configurações e áudio -->
+    <script src="js/config.js"></script>
+    <script src="js/settings.js"></script>
+    <script src="js/audio.js"></script>
+
+    <!-- Motor e mundo 3D -->
+    <script src="js/engine.js"></script>
+    <script src="js/textures.js"></script>
+    <script src="js/scenery.js"></script>
+    <script src="js/world.js"></script>
+
+    <!-- Personagem e alimentos -->
+    <script src="js/player.js"></script>
+    <script src="js/foods.js"></script>
+
+    <!-- Lógica e controles do jogo -->
+    <script src="js/game.js"></script>
+    <script src="js/input.js"></script>
+    <script src="js/telas.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
